@@ -13,8 +13,9 @@ module Bibliografia
        	    	    @ISBN << num
 	        end
 
-                def get_APA_title
-		   "Título del libro: " + super.Title	
+                def apa
+			get_APA + "\n"
+				
                 end
 	
 	end

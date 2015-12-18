@@ -93,10 +93,12 @@ module LinkedList
 #               if (aux.each
                aux2 = ''
                for i in 0..aux.size-1
-                  aux2 += aux[i].get_APA
+                  aux2 += aux[i].apa
                end
                aux2
            end
+
+		
         end
   # Your code goes here...
 end
