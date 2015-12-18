@@ -6,6 +6,7 @@ module Bibliografia
 		def initialize 
 			super
 			@ISSN = []
+			@URL = []
 		end
 		def add_ISSN(num)
 			@ISSN << num

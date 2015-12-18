@@ -15,5 +15,9 @@ module Bibliografia
 		def add_URL(url)
 			@URL << url
 		end
+
+		def apa
+			get_APA + "URL : #{@URL}. ISSN : #{@ISSN}\n"				
+                end
 	end
 end

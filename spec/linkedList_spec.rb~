@@ -35,8 +35,11 @@ describe "Practica 10" do
              @l.push_back(@b2)
              @l.push_back(@b3)
              @l.push_back(@b4)
+	
+	     #Ordenamos los libros en función de los nombres.
+	     @l  = @l.sort
 
-             puts "\n" + @l.to_s
+             expect( @l.find_index(@b1) >= @l.index(@b2)).to eq true
       
        end
 
@@ -60,7 +63,7 @@ describe "Practica 10" do
 	   @b.set_editorial("Programming languages")
 
 	    puts @b.apa
-	   expect(@b.apa).to eq "Cicko, R. & Diaz, E. & Darias, D. (2015) Ruby best language. Editorial Programming langueges. ISBN-453459879\n"
+	   expect(@b.apa).to eq "Cicko, R. & Diaz, E. & Darias, D. (2015) Ruby best language. Editorial Programming languages. ISBN-453459879\n"
 	end
 
 	

@@ -35,8 +35,12 @@ describe "Practica 10" do
              @l.push_back(@b2)
              @l.push_back(@b3)
              @l.push_back(@b4)
+	
+	     #Ordenamos los libros en función de los nombres.
+	     @l  = @l.sort
 
-             puts "\n" + @l.to_s
+	     #comprobamos que el libro b1 está después del b2
+             expect( @l.find_index(@b1) >= @l.index(@b2)).to eq true
       
        end
 

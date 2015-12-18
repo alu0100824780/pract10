@@ -87,6 +87,8 @@ module LinkedList
 	      @Size == 0
 	   end
 
+
+
 	   
 
            def to_s

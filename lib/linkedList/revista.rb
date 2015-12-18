@@ -12,6 +12,10 @@ module Bibliografia
 		     @ISSN << num
 		end
 
+   		def apa
+			get_APA + "#{@ISSN}\n"				
+                end
+
 	end
 end
 
