@@ -6,7 +6,7 @@ module Bibliografia
 		
 		def initialize
 		    super
-	            @ISBN = []
+	            @ISBN = ""
 		end
 
 	        def add_ISBN(num)
@@ -14,8 +14,7 @@ module Bibliografia
 	        end
 
                 def apa
-			get_APA + "\n"
-				
+			get_APA + "#{@ISBN}\n"				
                 end
 	
 	end

@@ -29,7 +29,7 @@ module Bibliografia
             @Author = ["Sin autores"]
             @Title = "Sin titulo"
             @Serie = nil
-            @Editorial = "Editorial sin definir"
+            @Editorial = ""
             @Edicion = 0
             @Fecha_Publication = Date.new(1990,1,1)
         end
@@ -78,7 +78,7 @@ module Bibliografia
 
 
 	def get_APA_date
-	    "(" + @Fecha_Publication.to_s + ") "
+	    "(" + @Fecha_Publication.year.to_s + ") "
         end
 
 
@@ -87,7 +87,8 @@ module Bibliografia
 	end
 
 	def get_APA_editorial
-            "Editorial " + @Editorial + ". "
+	  
+            "Editorial " + @Editorial + ". " if not @Editorial == ""
 	end
 
 

@@ -87,6 +87,8 @@ module LinkedList
 	      @Size == 0
 	   end
 
+	   
+
            def to_s
                aux = []
                aux = sort
@@ -97,6 +99,14 @@ module LinkedList
                end
                aux2
            end
+
+	   def size
+	      @Size
+	   end
+
+	   def length
+		size
+	   end
 
 		
         end

@@ -29,13 +29,14 @@ describe "Practica 10" do
 	     @b4 = Bibliografia::Book.new
 	     @b4.add_author("Gabriel Reveron Hernandez")
 	     @b4.set_publication(23,8,1994)
+	     @b4.add_ISBN("ISBN: 978-0596523008")
              
              @l.push_back(@b1)
              @l.push_back(@b2)
              @l.push_back(@b3)
              @l.push_back(@b4)
 
-             puts "\n" + @l.to_S
+             puts "\n" + @l.to_s
       
        end
 
@@ -46,6 +47,23 @@ describe "Practica 10" do
            @b.add_author("Eleazar Diaz")
            expect(@b.get_APA_authors).to eq "Cicko, R. & Diaz, E. "
        end
+
+
+	it "have complete APA format" do
+	   @b = Bibliografia::Book.new
+	   @b.add_author("Rudolf Cicko")
+	   @b.add_author("Eleazar Diaz")
+	   @b.add_author("Daniel Darias")
+           @b.set_title("Ruby best language")
+	   @b.set_publication(23,8,2015)
+	   @b.add_ISBN("ISBN-453459879")
+	   @b.set_editorial("Programming languages")
+
+	    puts @b.apa
+	   expect(@b.apa).to eq "Cicko, R. & Diaz, E. & Darias, D. (2015) Ruby best language. Editorial Programming langueges. ISBN-453459879\n"
+	end
+
+	
 
 
     end
