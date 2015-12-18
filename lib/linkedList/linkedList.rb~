@@ -87,10 +87,7 @@ module LinkedList
 	      @Size == 0
 	   end
 
-	   def index(value)
-	      index(value)
-	   end
-		
+
 
 	   
 

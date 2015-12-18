@@ -40,7 +40,7 @@ describe "Practica 10" do
 	     @l  = @l.sort
 
 	     #comprobamos que el libro b1 está después del b2
-             expect( @l.find_index(@b1) >= @l.index(@b2)).to eq true
+             expect( @l.index(@b1) >= @l.index(@b2)).to eq true
       
        end
 
